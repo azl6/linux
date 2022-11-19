@@ -13,8 +13,6 @@
 
 **man <cmd_name>** - Manual dos comandos.
 
-![a](https://user-images.githubusercontent.com/80921933/202582532-bb97a1cf-18e5-4c60-bebe-8e32684220d5.png)
-
 <br>
 
 **pwd** - Printa onde estamos.
@@ -47,3 +45,29 @@
 - Option ``-r`` reverte a ordenação
 - Option ``-u`` ordena por valores únicos
 - Option ``-k <col_number>`` ordena pela coluna especificada, exemplo -> VALORES: 1 alex 7.00, COLUNAS: id nome nota. Útil para ordenar o **ls -l** por exemplo.
+
+# Redirection
+
+Podemos redirecionar a saída (stdout) de um comando para outros destinos além do terminal, como para um arquivo, utilizando o operador `>`
+```
+$ date > outputAqui.txt
+$ cat outputAqui.txt
+```
+O approach do `>` irá sobreescrever os dados com o novo input. Para concatenar, usamos o `>>`
+
+![concatRedirection](https://user-images.githubusercontent.com/80921933/202872814-bdd77014-4b4f-42ce-b261-32444cd01e07.png)
+
+Já o comando `<` direciona um input (stdin) para um comando. Perceba que, até o momento, ambos os comandos terão o mesmo output.
+
+![inputRedir](https://user-images.githubusercontent.com/80921933/202872959-436f9fab-860d-424d-893d-e1ef8918afee.png)
+
+Para redirecionar erros, podemos utilizar o operador `2>`, ou contatenar com o `2>>`
+
+![Screenshot from 2022-11-19 19-10-06](https://user-images.githubusercontent.com/80921933/202873358-4c728e80-a087-4ef4-8e98-44f844df105b.png)
+
+
+![Screenshot from 2022-11-19 19-07-42](https://user-images.githubusercontent.com/80921933/202873286-b3c1584a-79d4-4133-b0d4-c0d057e03591.png)
+
+
+
+
