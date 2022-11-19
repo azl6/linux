@@ -11,8 +11,39 @@
 
 # Comandos Linux
 
-**man [cmd_name]** - Manual dos comandos.
+**man <cmd_name>** - Manual dos comandos.
 
 ![a](https://user-images.githubusercontent.com/80921933/202582532-bb97a1cf-18e5-4c60-bebe-8e32684220d5.png)
 
+<br>
+
 **pwd** - Printa onde estamos.
+
+<br>
+
+**less** - Mesma coisa que o comando ``cat``, porém, paginado.
+
+<br>
+
+**head** - Printa as 10 primeiras linhas de um arquivo. 
+- Option ``-n <lines_number>`` permite que escolhamos o números de linhas desejadas. 
+
+<br>
+
+**tail** - Printa as 10 últimas linhas de um arquivo.
+- Option ``-n <lines_number>`` permite que escolhamos o números de linhas desejadas. 
+- Option ``-f`` segue as alterações do arquivo. Util para monitorar logs.
+
+<br>
+
+**wc** - Conta a quantidade de linhas, palavras e bytes (nesta ordem) em um arquivo.
+- Option ``-w`` printa a quantidade de palavras.
+- Option ``-l`` printa a quantidade de linhas.
+
+<br>
+
+**sort** - Ordena o conteúdo de um arquivo
+- Option ``-n`` ordena números. 
+- Option ``-r`` reverte a ordenação
+- Option ``-u`` ordena por valores únicos
+- Option ``-k <col_number>`` ordena pela coluna especificada, exemplo -> VALORES: 1 alex 7.00, COLUNAS: id nome nota. Útil para ordenar o **ls -l** por exemplo.
