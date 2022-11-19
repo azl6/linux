@@ -61,7 +61,7 @@ Já o comando `<` direciona um input (stdin) para um comando. Perceba que, até 
 
 ![inputRedir](https://user-images.githubusercontent.com/80921933/202872959-436f9fab-860d-424d-893d-e1ef8918afee.png)
 
-Para redirecionar erros, podemos utilizar o operador `2>`, ou contatenar com o `2>>`
+Para redirecionar erros (stderr), podemos utilizar o operador `2>`, ou contatenar com o `2>>`
 
 ![Screenshot from 2022-11-19 19-10-06](https://user-images.githubusercontent.com/80921933/202873358-4c728e80-a087-4ef4-8e98-44f844df105b.png)
 
