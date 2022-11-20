@@ -65,8 +65,18 @@ Para redirecionar erros (stderr), podemos utilizar o operador `2>`, ou contatena
 
 ![Screenshot from 2022-11-19 19-10-06](https://user-images.githubusercontent.com/80921933/202873358-4c728e80-a087-4ef4-8e98-44f844df105b.png)
 
-
 ![Screenshot from 2022-11-19 19-07-42](https://user-images.githubusercontent.com/80921933/202873286-b3c1584a-79d4-4133-b0d4-c0d057e03591.png)
+
+# Piping
+
+Quando jogamos um stdout para o stdin de outro comando.
+
+No exemplo abaixo, usamos a saída do comando `ls -l` na entrada do comando `sort`
+
+![Screenshot from 2022-11-19 20-46-40](https://user-images.githubusercontent.com/80921933/202876019-c4d65bbb-9963-4604-a0b4-bb6f80f4ece8.png)
+
+
+![Screenshot from 2022-11-19 20-42-07](https://user-images.githubusercontent.com/80921933/202876027-9283c60e-ab5e-4edb-a1c5-ff171994905a.png)
 
 
 
