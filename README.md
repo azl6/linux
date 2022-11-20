@@ -52,6 +52,14 @@
 
 ![Screenshot from 2022-11-19 21-10-28](https://user-images.githubusercontent.com/80921933/202876631-7ea008e1-bab6-421f-808c-a01121d13df6.png)
 
+<br>
+
+**find** - Busca arquivos com base no padrão informado.
+
+- Option ``-type <type>`` busca por arquivos (type=f) ou diretórios (type=d)
+- Option ``-name "<padrão>"`` busca por arquivos que atendam ao padrão especificado. Ex: find -name "*.txt" busca por todos os arquivos finalizados em ".txt".
+[CONTINUAR AULA 109]
+
 # Redirection
 
 Podemos redirecionar a saída (stdout) de um comando para outros destinos além do terminal, como para um arquivo, utilizando o operador `>`
