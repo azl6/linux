@@ -46,6 +46,12 @@
 - Option ``-u`` ordena por valores únicos
 - Option ``-k <col_number>`` ordena pela coluna especificada, exemplo -> VALORES: 1 alex 7.00, COLUNAS: id nome nota. Útil para ordenar o **ls -l** por exemplo.
 
+<br>
+
+**tee** - Cria um arquivo com o stdout e o copia para um próximo pipe.
+
+![Screenshot from 2022-11-19 21-10-28](https://user-images.githubusercontent.com/80921933/202876631-7ea008e1-bab6-421f-808c-a01121d13df6.png)
+
 # Redirection
 
 Podemos redirecionar a saída (stdout) de um comando para outros destinos além do terminal, como para um arquivo, utilizando o operador `>`
