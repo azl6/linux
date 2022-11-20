@@ -62,6 +62,23 @@
 - Option ``-amin {+,-}<time>`` busca por arquivos com o access time maior/menor que <time>.
 - Option ``-mtime {+,-}<time>`` busca por arquivos com o modification time maior/menor que <time>. Diferentemente do mmin, o mtime busca por <time>*24, ou seja, o <time> informado no parâmetro representa o período de um dia inteiro.
 
+**grep <PATTERN> <FILE>** - Busca por ocorrências de um padrão dentro de um arquivo/texto.
+
+- Option ``-i`` deixa a busca case-insensitive
+- Option ``-w`` busca somente ocorrências isoladas, Ex: `grep -w "car" arquivo.txt` irá encontrar a palavra "car", mas não "ufscar"
+- Option ``-r`` busca recursivamente por ocorrências a partir do diretório onde estamos (mas também podemos fornecer um diretório a ser buscado)
+
+![Screenshot from 2022-11-20 20-14-19](https://user-images.githubusercontent.com/80921933/202931762-b989cd95-1e50-405d-bbc0-dd9ecd9cccf8.png)
+
+Podemos também usar expansion (ou regex) em um `grep`
+
+![Screenshot from 2022-11-20 20-17-45](https://user-images.githubusercontent.com/80921933/202931919-9ae2965d-a748-42d2-83ad-e95ce893f77c.png)
+
+- Option ``-C <number>`` printará `<number>` linhas antes e depois de cada ocorrência encontrada
+- Option ``-n <number>`` printará o número das linhas encontradas
+
+**xargs** - **Inserir!!!**
+
 
 
 # Redirection
