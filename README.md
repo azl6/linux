@@ -58,7 +58,11 @@
 
 - Option ``-type <type>`` busca por arquivos (type=f) ou diretórios (type=d)
 - Option ``-name "<padrão>"`` busca por arquivos que atendam ao padrão especificado. Ex: find -name "*.txt" busca por todos os arquivos finalizados em ".txt".
-[CONTINUAR AULA 109]
+- Option ``-mmin {+,-}<time>`` busca por arquivos com o modification time maior/menor que <time>.
+- Option ``-amin {+,-}<time>`` busca por arquivos com o access time maior/menor que <time>.
+- Option ``-mtime {+,-}<time>`` busca por arquivos com o modification time maior/menor que <time>. Diferentemente do mmin, o mtime busca por <time>*24, ou seja, o <time> informado no parâmetro representa o período de um dia inteiro.
+
+
 
 # Redirection
 
