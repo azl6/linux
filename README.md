@@ -84,6 +84,18 @@ No exemplo abaixo, usamos a saída do comando `ls -l` na entrada do comando `sor
 
 ![Screenshot from 2022-11-19 20-42-07](https://user-images.githubusercontent.com/80921933/202876027-9283c60e-ab5e-4edb-a1c5-ff171994905a.png)
 
+# Expansion
 
+![Screenshot from 2022-11-20 12-53-59](https://user-images.githubusercontent.com/80921933/202912034-3f3d208d-6fa1-4a21-81d2-66f4a20ccdab.png)
+
+![Screenshot from 2022-11-20 12-30-34](https://user-images.githubusercontent.com/80921933/202911952-d7891c7f-01a9-4f20-8006-f39a46dd8c00.png)
+
+![Screenshot from 2022-11-20 12-30-38](https://user-images.githubusercontent.com/80921933/202911961-3ecda255-d467-40c8-90f2-770e989e52c8.png)
+
+![Screenshot from 2022-11-20 12-56-27](https://user-images.githubusercontent.com/80921933/202912144-7a8b48d0-0a49-4fff-b445-fc645ab43766.png)
+
+![Screenshot from 2022-11-20 12-58-49](https://user-images.githubusercontent.com/80921933/202912247-3eb3d246-45ee-4045-ba0f-f47a99d4139e.png)
+
+![Screenshot from 2022-11-20 13-01-33](https://user-images.githubusercontent.com/80921933/202912404-b8205fcb-b48b-4a79-9aa8-ac891183498b.png)
 
 
