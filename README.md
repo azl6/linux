@@ -82,7 +82,14 @@ Podemos também usar expansion (ou regex) em um `grep`
 
 <br>
 
-**xargs** - **Inserir!!!**
+Pendentes de inserção:
+
+**xargs** <br>
+**curl** <br>
+**wget** <br>
+![comandos network](https://user-images.githubusercontent.com/80921933/203087910-e28c49ea-a5ac-4a07-8c21-192ec7af0ce2.png)
+
+
 
 
 
