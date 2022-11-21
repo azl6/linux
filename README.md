@@ -8,6 +8,9 @@
 
 ![a](https://user-images.githubusercontent.com/80921933/202593547-fe98e703-27b0-428e-b70c-8f4cfd3699b5.png)
 
+# Geral
+
+![Screenshot from 2022-11-20 20-34-11](https://user-images.githubusercontent.com/80921933/202932602-c3c0ad88-7fed-44de-9577-455c0abc59b2.png)
 
 # Comandos Linux
 
@@ -76,6 +79,8 @@ Podemos também usar expansion (ou regex) em um `grep`
 
 - Option ``-C <number>`` printará `<number>` linhas antes e depois de cada ocorrência encontrada
 - Option ``-n <number>`` printará o número das linhas encontradas
+
+<br>
 
 **xargs** - **Inserir!!!**
 
