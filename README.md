@@ -107,6 +107,8 @@ Operações de adição ou remoção de permissões:
 
 **adduser <user_name> <group_name>** - Cria um grupo.
 
+**printenv** - Printa as variáveis de ambiente.
+
 Comandos pendentes de inserção:
 
 **xargs** <br>
