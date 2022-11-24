@@ -95,11 +95,24 @@ Operações de adição ou remoção de permissões:
 - **-** (remove)
 - **=** (atualiza as permissões, removendo todas as anteriores e atribuindo todas as novas)
 
+**su** - Loga como outro usuário (switch/substitute user)
+
+- Option obrigatória ``--login`` (ou somente ``-``) evitará que os ambientes dos usuários sejam misturados. Use sempre essa flag!
+
+**chown <{user_name, :group_name}> <{arquivo, diretorio}>** - Muda o dono e/ou grupo dono de um arquivo/diretório.
+
+**groups <user_name>** - Lista os grupos dos quais um usuário faz parte.
+
+**add group <group_name>** - Cria um grupo.
+
+**adduser <user_name> <group_name>** - Cria um grupo.
+
 Comandos pendentes de inserção:
 
 **xargs** <br>
 **curl** <br>
 **wget** <br>
+
 ![comandos network](https://user-images.githubusercontent.com/80921933/203087910-e28c49ea-a5ac-4a07-8c21-192ec7af0ce2.png)
 
 # Redirection
@@ -155,6 +168,8 @@ No exemplo abaixo, usamos a saída do comando `ls -l` na entrada do comando `sor
 ![Screenshot from 2022-11-23 21-48-20](https://user-images.githubusercontent.com/80921933/203670213-c617c312-2684-43fa-8a8f-e5197f808eb3.png)
 
 ![Screenshot from 2022-11-23 21-51-32](https://user-images.githubusercontent.com/80921933/203670546-e1168483-127f-4e15-9d56-c55f3e789b4a.png)
+
+# Groups
 
 
 
