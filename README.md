@@ -82,6 +82,19 @@ Podemos também usar expansion (ou regex) em um `grep`
 
 <br>
 
+**chmod** - Fornece ou remove permissões em arquivos/diretórios.
+
+Possíveis destinos das permissões:
+- **u** (usuário/dono)
+- **g** (grupo)
+- **o** (outros)
+- **a** (todos)
+
+Operações de adição ou remoção de permissões:
+- **+** (adiciona)
+- **-** (remove)
+- **=** (atualiza as permissões, removendo todas as anteriores e atribuindo todas as novas)
+
 Comandos pendentes de inserção:
 
 **xargs** <br>
@@ -134,5 +147,16 @@ No exemplo abaixo, usamos a saída do comando `ls -l` na entrada do comando `sor
 ![Screenshot from 2022-11-20 12-58-49](https://user-images.githubusercontent.com/80921933/202912247-3eb3d246-45ee-4045-ba0f-f47a99d4139e.png)
 
 ![Screenshot from 2022-11-20 13-01-33](https://user-images.githubusercontent.com/80921933/202912404-b8205fcb-b48b-4a79-9aa8-ac891183498b.png)
+
+# Permissions
+
+![Screenshot from 2022-11-23 21-43-53](https://user-images.githubusercontent.com/80921933/203669915-6c956dcd-4ec8-4910-9123-863ba9e992ba.png)
+
+![Screenshot from 2022-11-23 21-48-20](https://user-images.githubusercontent.com/80921933/203670213-c617c312-2684-43fa-8a8f-e5197f808eb3.png)
+
+![Screenshot from 2022-11-23 21-51-32](https://user-images.githubusercontent.com/80921933/203670546-e1168483-127f-4e15-9d56-c55f3e789b4a.png)
+
+
+
 
 
