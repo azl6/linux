@@ -171,3 +171,29 @@ No exemplo abaixo, usamos a saída do comando `ls -l` na entrada do comando `sor
 ![Screenshot from 2022-11-23 21-48-20](https://user-images.githubusercontent.com/80921933/203670213-c617c312-2684-43fa-8a8f-e5197f808eb3.png)
 
 ![Screenshot from 2022-11-23 21-51-32](https://user-images.githubusercontent.com/80921933/203670546-e1168483-127f-4e15-9d56-c55f3e789b4a.png)
+
+
+# Bash Script
+
+Para criar um primeiro bash script:
+
+- Criar um script e inserí-lo no arquivo **hi**
+
+```shell
+echo "Hello, $USER!"
+echo "This is my first script!"
+```
+
+- Para executar o comando sem o `sudo`, devemos dar permissão de execução para os usuários:
+
+```
+chmod a+x hi
+```
+
+- Depois, atualizamos a variável PATH. A variável PATH é o que o S.O usa para buscar scripts executáveis em nosso PC. Para isso, abrimos o arquivo `~/.bashrc` e inserimos a linha:
+
+```shell
+export PATH="/$HOME/bin:$PATH" 
+```
+
+Pronto! Já podemos executar o nosso script de qualquer parte do PC.
