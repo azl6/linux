@@ -192,8 +192,16 @@ chmod a+x hi
 
 - Depois, atualizamos a variável PATH. A variável PATH é o que o S.O usa para buscar scripts executáveis em nosso PC. Para isso, abrimos o arquivo `~/.bashrc` e inserimos a linha:
 
-```shell
+```
+# ...
 export PATH="/$HOME/bin:$PATH" 
+# ...
+```
+  
+Para que o script seja utilizável sem precisarmos abrir uma nova sessão do terminal, executamos:
+  
+```
+source ~/.bashrc
 ```
 
 Pronto! Já podemos executar o nosso script de qualquer parte do PC.
