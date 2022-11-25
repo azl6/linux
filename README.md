@@ -106,6 +106,10 @@ Operações de adição ou remoção de permissões:
 
 **printenv** - Printa as variáveis de ambiente.
 
+**export <key>=<value>** - Cria uma variável de ambiente com o \<value> informado. As mudanças só valem para a sessão do terminal onde a variável foi criada. Para que as mudanças sejam permanentes, deve-se alterar o arquivo ~/.bashrc
+
+**alias <key>='<value>'** - Cria um alias para algum comando especificado no \<value>. As mudanças só valem para a sessão do terminal onde a variável foi criada. Para que as mudanças sejam permanentes, deve-se alterar o arquivo ~/.bashrc
+
 Comandos pendentes de inserção:
 
 **xargs** <br>
@@ -167,10 +171,3 @@ No exemplo abaixo, usamos a saída do comando `ls -l` na entrada do comando `sor
 ![Screenshot from 2022-11-23 21-48-20](https://user-images.githubusercontent.com/80921933/203670213-c617c312-2684-43fa-8a8f-e5197f808eb3.png)
 
 ![Screenshot from 2022-11-23 21-51-32](https://user-images.githubusercontent.com/80921933/203670546-e1168483-127f-4e15-9d56-c55f3e789b4a.png)
-
-# Groups
-
-
-
-
-
