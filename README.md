@@ -173,7 +173,7 @@ No exemplo abaixo, usamos a saída do comando `ls -l` na entrada do comando `sor
 ![Screenshot from 2022-11-23 21-51-32](https://user-images.githubusercontent.com/80921933/203670546-e1168483-127f-4e15-9d56-c55f3e789b4a.png)
 
 
-# Bash Script
+# Bash Scripting básico
 
 Para criar um primeiro bash script:
 
@@ -205,3 +205,21 @@ source ~/.bashrc
 ```
 
 Pronto! Já podemos executar o nosso script de qualquer parte do PC.
+
+# Cron jobs
+
+![Screenshot from 2022-11-25 22-23-56](https://user-images.githubusercontent.com/80921933/204067185-383523da-e3c0-4863-b81d-2278b3f89368.png)
+
+![Screenshot from 2022-11-25 22-24-47](https://user-images.githubusercontent.com/80921933/204067218-8dba4c2d-85f0-449d-bf9a-3c7549b3c585.png)
+
+![Screenshot from 2022-11-25 22-26-08](https://user-images.githubusercontent.com/80921933/204067245-7b2f8ab3-abec-4be1-b995-211cf36c0c23.png)
+
+![Screenshot from 2022-11-25 22-27-08](https://user-images.githubusercontent.com/80921933/204067265-7abc5123-86df-4482-aed7-155a073ef468.png)
+
+![Screenshot from 2022-11-25 22-29-26](https://user-images.githubusercontent.com/80921933/204067339-f3441ae6-a7c8-49e9-a378-e7580b4a2145.png)
+
+Para escrever os cronjobs, abrimos o arquivo de configuração com o comando
+
+```
+crontab -e
+```
