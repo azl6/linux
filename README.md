@@ -296,9 +296,9 @@ Os 2 passos acima são representados pela seguinte imagem:
 ![Screenshot from 2022-11-26 15-51-10](https://user-images.githubusercontent.com/80921933/204104831-10b08723-9cd9-46f2-ba1e-906d25e972da.png)
 
 Depois disso, basta conectar normalmente ao servidor via ssh.
-
-
-
-
-
-
+ 
+ **IMPORTANTE** Conexões com instâncias EC2 são feitas a partir do seguinte comando:
+ 
+ ```
+ ssh -i /path/key-pair-name.pem instance-user-name@instance-public-dns-name
+ ```
