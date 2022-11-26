@@ -122,9 +122,9 @@ Exemplos de utilização:
  
     ![Screenshot from 2022-11-26 14-33-29](https://user-images.githubusercontent.com/80921933/204101617-d60bee3f-c31a-4369-bffd-7b73514bd979.png)
 
-**uniq** - Usado para pegar ocorrências únicas
+ - **uniq** - Usado para pegar ocorrências únicas
 
-![Screenshot from 2022-11-26 14-43-05](https://user-images.githubusercontent.com/80921933/204101967-6d5edca8-1392-4203-8153-99ea41a021c6.png)
+    ![Screenshot from 2022-11-26 14-43-05](https://user-images.githubusercontent.com/80921933/204101967-6d5edca8-1392-4203-8153-99ea41a021c6.png)
 
 Comandos pendentes de inserção:
 
