@@ -114,17 +114,26 @@ Operações de adição ou remoção de permissões:
 
 Exemplos de utilização:
 
-- **cat \<arquivo.txt> | awk '{print $1}'** - Printa a primeira coluna (representada por $1) do \<arquivo.txt>, utilizando um espaço como separador.
+**cat \<arquivo.txt> | awk '{print $1}'** - Printa a primeira coluna (representada por $1) do \<arquivo.txt>, utilizando um espaço como separador.
  
-    ![Screenshot from 2022-11-26 14-22-09](https://user-images.githubusercontent.com/80921933/204101337-7a0d6159-af55-4f38-9b17-3d3a216e6bf7.png)
+   ![Screenshot from 2022-11-26 14-22-09](https://user-images.githubusercontent.com/80921933/204101337-7a0d6159-af55-4f38-9b17-3d3a216e6bf7.png)
  
  - **cat \<separadoPorPonto.txt> | awk -F ":" '{print $1}'** - Printa a primeira coluna (representada por $1) do \<arquivo.txt>, utilizando ':' como separador.
  
-    ![Screenshot from 2022-11-26 14-33-29](https://user-images.githubusercontent.com/80921933/204101617-d60bee3f-c31a-4369-bffd-7b73514bd979.png)
+   ![Screenshot from 2022-11-26 14-33-29](https://user-images.githubusercontent.com/80921933/204101617-d60bee3f-c31a-4369-bffd-7b73514bd979.png)
 
- - **uniq** - Usado para pegar ocorrências únicas
+**uniq** - Usado para pegar ocorrências únicas
 
     ![Screenshot from 2022-11-26 14-43-05](https://user-images.githubusercontent.com/80921933/204101967-6d5edca8-1392-4203-8153-99ea41a021c6.png)
+
+
+**tar -f <destiny> <origin>** - Usado para comprimir arquivos (similar ao .zip)
+- Option ``-c`` Compacta um diretório
+- Option ``-x`` Extrai um arquivo .tar
+- Option ``-z`` Usa o algorítmo gzip para compactar/extrair
+- Option ``-v`` Forma verbosa, arquivos extraidos/compactados serão listados
+- Option ``-f`` Especifica o arquivo (já está incluido no comando pq é sempre utilizado)
+
 
 Comandos pendentes de inserção:
 
