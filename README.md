@@ -106,9 +106,25 @@ Operações de adição ou remoção de permissões:
 
 **printenv** - Printa as variáveis de ambiente.
 
-**export <key>=<value>** - Cria uma variável de ambiente com o \<value> informado. As mudanças só valem para a sessão do terminal onde a variável foi criada. Para que as mudanças sejam permanentes, deve-se alterar o arquivo ~/.bashrc
+**export \<key>=\<value>** - Cria uma variável de ambiente com o \<value> informado. As mudanças só valem para a sessão do terminal onde a variável foi criada. Para que as mudanças sejam permanentes, deve-se alterar o arquivo ~/.bashrc
 
-**alias <key>='<value>'** - Cria um alias para algum comando especificado no \<value>. As mudanças só valem para a sessão do terminal onde a variável foi criada. Para que as mudanças sejam permanentes, deve-se alterar o arquivo ~/.bashrc
+**alias \<key>='\<value>'** - Cria um alias para algum comando especificado no \<value>. As mudanças só valem para a sessão do terminal onde a variável foi criada. Para que as mudanças sejam permanentes, deve-se alterar o arquivo ~/.bashrc
+
+**awk** - Serve para manipularmos colunas e printarmos seus conteúdos com um separador. Por padrão, o awk utiliza como separador um espaço. Esse comportamento pode ser alterado.
+
+Exemplos de utilização:
+
+- **cat \<arquivo.txt> | awk '{print $1}'** - Printa a primeira coluna (representada por $1) do \<arquivo.txt>, utilizando um espaço como separador.
+ 
+    ![Screenshot from 2022-11-26 14-22-09](https://user-images.githubusercontent.com/80921933/204101337-7a0d6159-af55-4f38-9b17-3d3a216e6bf7.png)
+ 
+ - **cat \<separadoPorPonto.txt> | awk -F ":" '{print $1}'** - Printa a primeira coluna (representada por $1) do \<arquivo.txt>, utilizando ':' como separador.
+ 
+    ![Screenshot from 2022-11-26 14-33-29](https://user-images.githubusercontent.com/80921933/204101617-d60bee3f-c31a-4369-bffd-7b73514bd979.png)
+
+**uniq** - Usado para pegar ocorrências únicas
+
+![Screenshot from 2022-11-26 14-43-05](https://user-images.githubusercontent.com/80921933/204101967-6d5edca8-1392-4203-8153-99ea41a021c6.png)
 
 Comandos pendentes de inserção:
 
@@ -223,3 +239,66 @@ Para escrever os cronjobs, abrimos o arquivo de configuração com o comando
 ```
 crontab -e
 ```
+
+Depois, basta especificar, no final do arquivo, o cron job e o caminho do comando a ser rodado. Além disso, é possível direcionar os erros com o 2>> para um arquivo, caso aconteçam:
+
+```
+# ...
+* * * * * * ~/bin/comando 2>> ~/erros/errosComando.txt
+```
+
+# SSH (Secure Shell)
+
+Para criar um server onde podemos "entrar" com o SSH, executamos a seguinte linha:
+
+```
+sudo apt install openssh-server
+```
+
+O server é "entrável" 24/7. Para verificar o seu status, rodamos:
+
+```
+sudo systemctl status ssh
+```
+![Screenshot from 2022-11-26 15-07-52](https://user-images.githubusercontent.com/80921933/204102886-1afd09fe-518c-4b74-ab9f-7f8c92182193.png)
+
+Para permitirmos acesso ao server, devemos liberar a porta 22 (SSH) do ufw (firewall do Linux). Para checar se o firewall está up, executamos:
+
+```
+sudo systemctl status ufw
+```
+![Screenshot from 2022-11-26 15-16-14](https://user-images.githubusercontent.com/80921933/204103247-c607af32-9181-41fa-9308-cb85dc45f7d4.png)
+
+Caso esteja tudo funcionando, executamos o seguinte comando para liberar a porta do SSH:
+
+```
+sudo ufw allow ssh
+```
+
+Agora, sub a perspectiva do ssh-client, nos conectamos ao server. A sintaxe padrão de conexão é **ssh \<user>@\<ip>**.
+
+Para vericarmos o ip do server, executamos (no server):
+
+```
+ip a
+```
+![Screenshot from 2022-11-26 15-39-59](https://user-images.githubusercontent.com/80921933/204104152-e6347acd-0748-42d4-a5dd-0b913775c511.png)
+
+Depois, basta executar, a partir do client, o comando `ssh <\SERVER_USER>@\<IP_ENCONTRADO>`. A senha do usuário será requisitada, bastando informá-la para acessar o servidor.
+
+Caso queiramos criar uma chave ssh e acessar o servidor remoto a partir dela:
+
+1. Primeiro, criamos uma chave na máquina do client com o comando `ssh-keygen -t \<KEY_NAME>`
+2. Depois, enviamos a chave ao server com o comando `ssh-copy-id \<SERVER_USER>@\<SERVER_IP>`
+
+Os 2 passos acima são representados pela seguinte imagem:
+
+![Screenshot from 2022-11-26 15-51-10](https://user-images.githubusercontent.com/80921933/204104831-10b08723-9cd9-46f2-ba1e-906d25e972da.png)
+
+Depois disso, basta conectar normalmente ao servidor via ssh.
+
+
+
+
+
+
