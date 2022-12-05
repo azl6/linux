@@ -118,14 +118,21 @@ Exemplos de utilização:
  
    ![Screenshot from 2022-11-26 14-22-09](https://user-images.githubusercontent.com/80921933/204101337-7a0d6159-af55-4f38-9b17-3d3a216e6bf7.png)
  
- - **cat \<separadoPorPonto.txt> | awk -F ":" '{print $1}'** - Printa a primeira coluna (representada por $1) do \<arquivo.txt>, utilizando ':' como separador.
+ **cat \<separadoPorPonto.txt> | awk -F ":" '{print $1}'** - Printa a primeira coluna (representada por $1) do \<arquivo.txt>, utilizando ':' como separador.
  
    ![Screenshot from 2022-11-26 14-33-29](https://user-images.githubusercontent.com/80921933/204101617-d60bee3f-c31a-4369-bffd-7b73514bd979.png)
 
 **uniq** - Usado para pegar ocorrências únicas
 
-    ![Screenshot from 2022-11-26 14-43-05](https://user-images.githubusercontent.com/80921933/204101967-6d5edca8-1392-4203-8153-99ea41a021c6.png)
+   ![Screenshot from 2022-11-26 14-43-05](https://user-images.githubusercontent.com/80921933/204101967-6d5edca8-1392-4203-8153-99ea41a021c6.png)
 
+**sed** - Serve para substituirmos ocorrências de strings no arquivo com a seguinte sintaxe: 
+
+```
+sed 's/<STRING_PARA_REMOVER>/<STRING_SUBSTITUTA>/g' <INPUT_FILE>
+```
+
+![Screenshot from 2022-12-05 18-38-26](https://user-images.githubusercontent.com/80921933/205748249-c9946ad2-0c7e-44ec-b6b4-2c071161f38e.png)
 
 **tar -f <destiny> <origin>** - Usado para comprimir arquivos (similar ao .zip)
 - Option ``-c`` Compacta um diretório
