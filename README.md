@@ -238,7 +238,7 @@ source ~/.bashrc
 
 Pronto! Já podemos executar o nosso script de qualquer parte do PC.
 
-# Cron jobs
+# Cron jobs sem root necessário
 
 ![Screenshot from 2022-11-25 22-23-56](https://user-images.githubusercontent.com/80921933/204067185-383523da-e3c0-4863-b81d-2278b3f89368.png)
 
@@ -263,13 +263,27 @@ Depois, basta especificar, no final do arquivo, o cron job e o caminho do script
 * * * * * * ~/bin/script 2>> ~/erros/errosComando.txt
 ```
  
- Para cronjobs, também é possível lançarmos scripts dentro dos **cron directories**, que basicamente rodam os scripts lá armazenados com a periodicidade definida no sufixo (weekly, hourly, daily...) **(NÃO É PERMITIDO COLOCAR O CARACTER PONTO (.) NO NOME DOS SCRIPTS ARMAZENADOS LÁ)**
+Para cronjobs, também é possível lançarmos scripts dentro dos **cron directories**, que basicamente rodam os scripts lá armazenados com a periodicidade definida no sufixo (weekly, hourly, daily...) **(NÃO É PERMITIDO COLOCAR O CARACTER PONTO (.) NO NOME DOS SCRIPTS ARMAZENADOS LÁ)**
  
- ![image](https://user-images.githubusercontent.com/80921933/206558166-188e5fa2-40d4-4f29-9067-bb9f50747dd2.png)
+![image](https://user-images.githubusercontent.com/80921933/206558166-188e5fa2-40d4-4f29-9067-bb9f50747dd2.png)
  
- Para verificarmos/alterarmos a data com que cada pasta roda os scripts, podemos consultar o arquivo /etc/crontab
+Para verificarmos/alterarmos a data com que cada pasta roda os scripts, podemos consultar o arquivo /etc/crontab
  
- ![image](https://user-images.githubusercontent.com/80921933/206558777-309d6813-f3ed-4286-806f-49e0741b9932.png)
+![image](https://user-images.githubusercontent.com/80921933/206558777-309d6813-f3ed-4286-806f-49e0741b9932.png)
+
+# Cron jobs com root
+ 
+Para rodarmos cronjobs com comandos que só podem ser executados pelo **root user**, devemos:
+ 
+```
+sudo nano /etc/crontab
+```
+ 
+Implementamos aqui o nosso cronjob, e depois executamos:
+ 
+```
+sudo service cron restart
+```
 
  
 # SSH (Secure Shell)
