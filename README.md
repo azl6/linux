@@ -262,7 +262,16 @@ Depois, basta especificar, no final do arquivo, o cron job e o caminho do script
 # ...
 * * * * * * ~/bin/script 2>> ~/erros/errosComando.txt
 ```
+ 
+ Para cronjobs, também é possível lançarmos scripts dentro dos **cron directories**, que basicamente rodam os scripts lá armazenados com a periodicidade definida no sufixo (weekly, hourly, daily...) **(NÃO É PERMITIDO COLOCAR O CARACTER PONTO (.) NO NOME DOS SCRIPTS ARMAZENADOS LÁ)**
+ 
+ ![image](https://user-images.githubusercontent.com/80921933/206558166-188e5fa2-40d4-4f29-9067-bb9f50747dd2.png)
+ 
+ Para verificarmos/alterarmos a data com que cada pasta roda os scripts, podemos consultar o arquivo /etc/crontab
+ 
+ ![image](https://user-images.githubusercontent.com/80921933/206558777-309d6813-f3ed-4286-806f-49e0741b9932.png)
 
+ 
 # SSH (Secure Shell)
 
 Para criar um server onde podemos "entrar" com o SSH, executamos a seguinte linha:
