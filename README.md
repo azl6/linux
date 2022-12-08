@@ -256,11 +256,11 @@ Para escrever os cronjobs, abrimos o arquivo de configuração com o comando
 crontab -e
 ```
 
-Depois, basta especificar, no final do arquivo, o cron job e o caminho do comando a ser rodado. Além disso, é possível direcionar os erros com o 2>> para um arquivo, caso aconteçam:
+Depois, basta especificar, no final do arquivo, o cron job e o caminho do script a ser rodado. Além disso, é possível direcionar os erros com o 2>> para um arquivo, caso aconteçam:
 
 ```
 # ...
-* * * * * * ~/bin/comando 2>> ~/erros/errosComando.txt
+* * * * * * ~/bin/script 2>> ~/erros/errosComando.txt
 ```
 
 # SSH (Secure Shell)
