@@ -98,11 +98,15 @@ Operações de adição ou remoção de permissões:
 
 **chown <{user_name, :group_name}> <{arquivo, diretorio}>** - Muda o dono e/ou grupo dono de um arquivo/diretório.
 
+**useradd** - Cria um usuário
+
+![image](https://user-images.githubusercontent.com/80921933/206821201-8991ad5e-29e0-4e70-aa3f-3600edc7ebf8.png)
+
 **groups <user_name>** - Lista os grupos dos quais um usuário faz parte.
 
 **add group <group_name>** - Cria um grupo.
 
-**adduser <user_name> <group_name>** - Cria um grupo.
+**adduser <user_name> <group_name>** - Adiciona um usuário a um grupo.
 
 **printenv** - Printa as variáveis de ambiente.
 
