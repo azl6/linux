@@ -91,16 +91,18 @@ Operações de adição ou remoção de permissões:
 - **+** (adiciona)
 - **-** (remove)
 - **=** (atualiza as permissões, removendo todas as anteriores e atribuindo todas as novas)
+ 
+ **chown <{user_name, :group_name}> <{arquivo, diretorio}>** - Muda o dono e/ou grupo dono de um arquivo/diretório.
 
 **su** - Loga como outro usuário (switch/substitute user)
 
 - Option obrigatória ``--login`` (ou somente ``-``) evitará que os ambientes dos usuários sejam misturados. Use sempre essa flag!
 
-**chown <{user_name, :group_name}> <{arquivo, diretorio}>** - Muda o dono e/ou grupo dono de um arquivo/diretório.
-
 **useradd \<USERNAME>** - Cria um usuário
-
-![image](https://user-images.githubusercontent.com/80921933/206821201-8991ad5e-29e0-4e70-aa3f-3600edc7ebf8.png)
+ 
+ ![image](https://user-images.githubusercontent.com/80921933/206821201-8991ad5e-29e0-4e70-aa3f-3600edc7ebf8.png)
+ 
+**passwd \<USERNAME>** - Altera a senha do usuário
 
 **groups <user_name>** - Lista os grupos dos quais um usuário faz parte.
 
