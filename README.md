@@ -104,6 +104,8 @@ Operações de adição ou remoção de permissões:
  
 **passwd \<USERNAME>** - Altera a senha do usuário
 
+**userdel \<USERNAME>** - Deleta um usuário
+
 **groups <user_name>** - Lista os grupos dos quais um usuário faz parte.
 
 **add group <group_name>** - Cria um grupo.
