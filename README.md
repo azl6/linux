@@ -352,9 +352,11 @@ Depois disso, basta conectar normalmente ao servidor via ssh.
  
  # Servidor Ubuntu contêinerizado com o openssh-server up
  
+ Vídeo usado como referência: https://www.youtube.com/watch?v=VQfrtRY6Szk
+ 
  Dockerfile:
  
- ```yaml
+```yml
  FROM ubuntu
 
 # Criando pasta necessária (ainda não sei o porquê)
@@ -380,5 +382,4 @@ COPY chavejenkins.pub /home/usuarioUbuntuServer/.ssh/authorized_keys/
 
 # Iniciando o ssh-server
 CMD [ "/usr/sbin/sshd", "-D" ]
-
- ```
+```
