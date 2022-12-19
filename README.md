@@ -335,7 +335,7 @@ Depois, basta executar, a partir do client, o comando `ssh <\SERVER_USER>@\<IP_E
 
 Caso queiramos criar uma chave ssh e acessar o servidor remoto a partir dela:
 
-1. Primeiro, criamos uma chave na máquina do client com o comando `ssh-keygen -t \<KEY_NAME>`
+1. Primeiro, criamos uma chave na máquina do client com o comando `ssh-keygen -f \<KEY_NAME>`
 2. Depois, enviamos a chave ao server com o comando `ssh-copy-id \<SERVER_USER>@\<SERVER_IP>`
 
 Os 2 passos acima são representados pela seguinte imagem:
@@ -343,12 +343,36 @@ Os 2 passos acima são representados pela seguinte imagem:
 ![Screenshot from 2022-11-26 15-51-10](https://user-images.githubusercontent.com/80921933/204104831-10b08723-9cd9-46f2-ba1e-906d25e972da.png)
 
 Depois disso, basta conectar normalmente ao servidor via ssh.
+
+ # SSH na AWS
  
- **IMPORTANTE** Conexões com instâncias EC2 são feitas a partir do seguinte comando:
+Conexões com instâncias EC2 são feitas a partir do seguinte comando:
  
  ```
  ssh -i /path/key-pair-name.pem instance-user-name@instance-public-dns-name
  ```
+ 
+ # SSH manual
+ 
+ Se queremos conectar dois servidores, client e server, podemos:
+ 
+ - Gerar a chave no client
+ 
+     ```
+     ssh-keygen -f exemplo
+     ```
+ 
+ - Copiar o contéudo da chave pública
+ 
+    ```
+    cat exemplo.pub
+    ```
+ 
+ - No servidor remoto, colar o contéudo copiado no arquivo $HOME/.ssh/authorized_keys
+ 
+ No servidor remoto, o arquivo authorized_keys deve ter permissões 400, e a pasta .ssh deve ter permissão 700.
+ 
+ Pronto! 
  
  # Servidor Ubuntu contêinerizado com o openssh-server up
  
