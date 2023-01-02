@@ -420,8 +420,12 @@ CMD [ "/usr/sbin/sshd", "-D" ]
 sudo useradd <USER_NAME>
 ```
  
+**-m** cria um home directory para o usuário
+ 
  # Deletando um usuário ao sistema
 
 ```
 sudo userdel <USER_NAME>
 ```
+ 
+**-r** deleta também o home directory do usuário
