@@ -517,3 +517,12 @@ sudo userdel <USER_NAME>
  ```
  
  Os **serviços** que podem ser passados no parâmetro **\<NOME_SERVIÇO>** são todos aqueles que podem ser iniciados com o comando **service** ou **systemctl**, como docker, apache2, httpd, ssh, etc...
+ 
+ # Listando USB's plugados
+ 
+ List block devices
+ 
+ ```
+ lsblk
+ ```
+ 
