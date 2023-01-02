@@ -497,3 +497,13 @@ sudo userdel <USER_NAME>
  ```
  
  Nele, podemos verificar todos os erros que ocorreram em tentativas de SSH ao servidor em questão, juntamente ao comando **tail -f** (-f significando follow)
+ 
+ # Logs do sistema
+ 
+ Os logs do sistema estão localizados no arquivo 
+ 
+ ```
+ /var/log/syslog
+ ```
+ 
+ Nele, podemos realizar o troubleshooting de tudo que acontece (ou deveria acontecer) no sistema
