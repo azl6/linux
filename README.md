@@ -407,3 +407,14 @@ COPY chavejenkins.pub /home/usuarioUbuntuServer/.ssh/authorized_keys/
 # Iniciando o ssh-server
 CMD [ "/usr/sbin/sshd", "-D" ]
 ```
+
+# Arquivo para verificar todos os usuários do sistema
+
+```
+/etc/passwd
+```
+# Adicionando um novo usuário ao sistema
+
+```
+sudo useradd <USER_NAME>
+```
