@@ -518,11 +518,54 @@ sudo userdel <USER_NAME>
  
  Os **serviços** que podem ser passados no parâmetro **\<NOME_SERVIÇO>** são todos aqueles que podem ser iniciados com o comando **service** ou **systemctl**, como docker, apache2, httpd, ssh, etc...
  
- # Listando USB's plugados
+ # Listando dispositivos plugados
  
  List block devices
  
  ```
  lsblk
  ```
+ 
+ ou
+ 
+ ```
+ sudo fdisk -l
+ ```
+ 
+ # Removendo um mountpoint
+ 
+ ```
+ sudo umount <MOUNT_PATH>
+ ```
+
+ O \<MOUNT_PATH> pode ser encontrado pelo comando **lsblk**, na columa **MOUNTPOINT**, ou pelo comando **fdisk -l**
+ 
+ # Criando uma nova partição em um dispositivo
+ 
+ Em um dispositivo **sem mountpoint**, podemos executar 
+ 
+ ```
+ sudo fdisk <DEVICE_PATH>
+ ```
+ 
+ **Obs:** O \<DEVICE_PATH> está geralmente localizado em /dev/..
+ 
+ Com o prompt do fdisk funcionando, podemos:
+ 
+ **g** - cria uma nova partition-table GPT
+ **n** - cria uma nova partição. basta dar enter nos passos do prompt, ou personalizar os tamanhos, se desejar.
+ **w** - commita as alterações
+ 
+ Após commitar as alterações do **fdisk** com a option **w**, devemos usar o comando **mkfs** para criar um file-system
+ 
+ ```
+ sudo mkfs.<FILESYSTEM_TYPE> -n "<LABEL_DA_PARTICAO>" <DEVICE_PATH>
+ ```
+ 
+ Opções válidas para o \<FILESYSTEM_TYPE> são ext4 (para Linux), dentre outras.
+ \<LABEL_DA_PARTICAO> se refere ao nome da partição no mountpoint. Se a flag -n não for informada, um label aleatório será gerado.
+ 
+ 
+ 
+ 
  
