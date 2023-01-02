@@ -507,3 +507,13 @@ sudo userdel <USER_NAME>
  ```
  
  Nele, podemos realizar o troubleshooting de tudo que acontece (ou deveria acontecer) no sistema
+ 
+ # Logs de serviços com o journalctl
+ 
+ Os logs de algum **serviço** específico podem ser verificados pelo seguinte comando 
+ 
+ ```
+ journalctl -u <NOME_SERVIÇO>
+ ```
+ 
+ Os **serviços** que podem ser passados no parâmetro **\<NOME_SERVIÇO>** são todos aqueles que podem ser iniciados com o comando **service** ou **systemctl**, como docker, apache2, httpd, ssh, etc...
