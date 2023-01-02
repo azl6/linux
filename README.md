@@ -532,6 +532,12 @@ sudo userdel <USER_NAME>
  sudo fdisk -l
  ```
  
+ ou
+ 
+ ```
+ df -h
+ ```
+ 
  # Removendo um mountpoint
  
  ```
@@ -550,7 +556,7 @@ sudo userdel <USER_NAME>
  
  **Obs:** O \<DEVICE_PATH> está geralmente localizado em /dev/..
  
- Com o prompt do fdisk funcionando, podemos:
+ Com o prompt do fdisk funcionando, podemos, nesta ordem:
  
  **g** - cria uma nova partition-table GPT
  **n** - cria uma nova partição. basta dar enter nos passos do prompt, ou personalizar os tamanhos, se desejar.
@@ -564,6 +570,12 @@ sudo userdel <USER_NAME>
  
  Opções válidas para o \<FILESYSTEM_TYPE> são ext4 (para Linux), dentre outras.
  \<LABEL_DA_PARTICAO> se refere ao nome da partição no mountpoint. Se a flag -n não for informada, um label aleatório será gerado.
+ 
+ Depois, basta montar o dispositivo em alguma pasta, geralmente em **/media** para dispositivos temporários ou **/mnt** para dispositivos mais "permanentes", como um segundo HD, etc.
+ 
+ ```
+ mount <DEVICE> <PATH>
+ ```
  
  
  
