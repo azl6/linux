@@ -413,8 +413,15 @@ CMD [ "/usr/sbin/sshd", "-D" ]
 ```
 /etc/passwd
 ```
+ 
 # Adicionando um novo usuário ao sistema
 
 ```
 sudo useradd <USER_NAME>
+```
+ 
+ # Deletando um usuário ao sistema
+
+```
+sudo userdel <USER_NAME>
 ```
