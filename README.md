@@ -589,7 +589,7 @@ sudo userdel <USER_NAME>
  wget <LINK>
  ```
  
- **-P \<PATH>** - especificando o caminho do download, já que por padrão, o wget baixará o arquivo na pasta onde foi executado.
+ **-P \<PATH>** - especificando o caminho do download, já que por padrão, o wget baixará o arquivo na pasta onde foi executado. <br>
  **-i \<FILE>** - especificando um arquivo com links para o wget baixar sequencialmente
  
  
