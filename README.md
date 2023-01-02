@@ -431,3 +431,50 @@ sudo userdel <USER_NAME>
 ```
  
 **-r** deleta também o home directory do usuário
+ 
+ # Mostrando de quais grupos o usuário faz parte
+ 
+ ```
+ groups
+ ```
+ 
+ # Arquivo para verificar todos os grupos do sistema
+
+ ```
+ /etc/group
+ ```
+ 
+ # Criando um grupo
+ 
+ ```
+ sudo groupadd <GROUP_NAME>
+ 
+ ```
+ 
+ # Deletando um grupo
+ 
+ ```
+ sudo groupdel <GROUP_NAME>
+ ```
+ 
+ # Adicionando um usuário a um grupo
+ 
+ ```
+ sudo usermod -aG <GROUP_NAME> <USER_NAME>
+ ```
+  
+ **-a** é "appendar"
+ **-G** vem de Grupo
+ 
+ Alternativamente, podemos usar o comando gpasswd
+ 
+ ```
+ sudo gpasswd -a <USER_NAME> <GROUP_NAME>
+ ```
+ 
+  # Removendo um usuário de um grupo
+ 
+ ```
+ sudo gpasswd -d <USER_NAME> <GROUP_NAME>
+ ```
+ 
