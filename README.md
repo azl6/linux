@@ -478,3 +478,22 @@ sudo userdel <USER_NAME>
  sudo gpasswd -d <USER_NAME> <GROUP_NAME>
  ```
  
+ # Logs de boot
+ 
+ Os logs de boot podem ser encontrados no seguinte arquivo
+ 
+ ```
+ /var/log/boot.log
+ ```
+ 
+ São úteis para troubleshooting de problemas ao bootar o PC
+ 
+  # Logs para SSH
+ 
+ Os logs para SSH podem ser encontrados no seguinte arquivo
+ 
+ ```
+ /var/log/auth.log
+ ```
+ 
+ Nele, podemos verificar todos os erros que ocorreram em tentativas de SSH ao servidor em questão, juntamente ao comando **tail -f** (-f significando follow)
