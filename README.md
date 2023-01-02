@@ -577,7 +577,20 @@ sudo userdel <USER_NAME>
  mount <DEVICE> <PATH>
  ```
  
+ # Baixando arquivos da internet com o wget
  
+ Podemos copiar o link de download de algum site, da seguinte forma
+ 
+ ![wget](https://user-images.githubusercontent.com/80921933/210285599-7a5fd2f9-ed22-4915-9615-8bb005b5a9e6.png)
+
+ Com o link copiado, basta usarmos ele no wget
+ 
+ ```
+ wget <LINK>
+ ```
+ 
+ **-P \<PATH>** - especificando o caminho do download, já que por padrão, o wget baixará o arquivo na pasta onde foi executado.
+ **-i \<FILE>** - especificando um arquivo com links para o wget baixar sequencialmente
  
  
  
