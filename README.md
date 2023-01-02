@@ -421,7 +421,8 @@ sudo useradd <USER_NAME>
 ```
  
 **-m** cria um home directory para o usuário
- **-r** indica que o usuário será um system user, com um UUID menor que 1000. System users não aparecem na tela de login, e são usados para tarefas de background
+**-r** indica que o usuário será um system user, com um UUID menor que 1000. System users não aparecem na tela de login, e são usados para tarefas de background
+**-s** especifica o shell padrão do usuário
  
  # Deletando um usuário ao sistema
 
