@@ -597,6 +597,44 @@ Exemplo de utilização:
 
 tar -cf pasta-a-ser-gerada pasta <br>
 tar -xf pasta-comprimida
+ 
+ # Gerenciando serviços como apache2, sshd, httpd pelo systemctl
+ 
+ Verificar o status de um serviço,
+ 
+ ```
+ systemctl status <SERVICE_NAME>
+ ```
+ 
+ Com o status, podemos ver se um serviço está **ENABLED** ou **DISABLED**
+
+ Serviços **DISABLED** não iniciarão juntamente ao boot do sistema, e terão de ser ativados a todo momento que o PC reiniciar!
+ 
+Para setar o status de um serviço como **ENABLED**, executamos:
+ 
+ ```
+ sudo systemctl enable <SERVICE_NAME>
+ ```
+ 
+ Para iniciar um serviço, executamos:
+ 
+ ```
+ sudo systemctl start <SERVICE_NAME>
+ ```
+ 
+ Para parar um serviço, executamos:
+ 
+ ```
+ sudo systemctl stop <SERVICE_NAME>
+ ```
+ 
+ Para desativar um serviço, executamos:
+ 
+ ```
+ sudo systemctl disable <SERVICE_NAME>
+ ```
+
+
 
  
  
