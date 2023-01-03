@@ -336,7 +336,7 @@ Os 2 passos acima são representados pela seguinte imagem:
 
 Depois disso, basta conectar normalmente ao servidor via ssh.
 
- # SSH na AWS
+# SSH na AWS
  
 Conexões com instâncias EC2 são feitas a partir do seguinte comando:
  
@@ -344,7 +344,7 @@ Conexões com instâncias EC2 são feitas a partir do seguinte comando:
  ssh -i /path/key-pair-name.pem instance-user-name@instance-public-dns-name
  ```
  
- # SSH manual
+# SSH manual
  
  Se queremos conectar dois servidores, client e server, podemos:
  
@@ -366,7 +366,7 @@ Conexões com instâncias EC2 são feitas a partir do seguinte comando:
  
  Pronto! 
  
- # Servidor Ubuntu contêinerizado com o openssh-server up
+# Servidor Ubuntu contêinerizado com o openssh-server up
  
  Vídeo usado como referência: https://www.youtube.com/watch?v=VQfrtRY6Szk
  
@@ -416,7 +416,7 @@ sudo useradd <USER_NAME>
 **-r** indica que o usuário será um system user, com um UUID menor que 1000. System users não aparecem na tela de login, e são usados para tarefas de background
 **-s** especifica o shell padrão do usuário
  
- # Deletando um usuário ao sistema
+# Deletando um usuário ao sistema
 
 ```
 sudo userdel <USER_NAME>
@@ -424,32 +424,32 @@ sudo userdel <USER_NAME>
  
 **-r** deleta também o home directory do usuário
  
- # Mostrando de quais grupos o usuário faz parte
+# Mostrando de quais grupos o usuário faz parte
  
  ```
  groups
  ```
  
- # Arquivo para verificar todos os grupos do sistema
+# Arquivo para verificar todos os grupos do sistema
 
  ```
  /etc/group
  ```
  
- # Criando um grupo
+# Criando um grupo
  
  ```
  sudo groupadd <GROUP_NAME>
  
  ```
  
- # Deletando um grupo
+# Deletando um grupo
  
  ```
  sudo groupdel <GROUP_NAME>
  ```
  
- # Adicionando um usuário a um grupo
+# Adicionando um usuário a um grupo
  
  ```
  sudo usermod -aG <GROUP_NAME> <USER_NAME>
@@ -464,13 +464,13 @@ sudo userdel <USER_NAME>
  sudo gpasswd -a <USER_NAME> <GROUP_NAME>
  ```
  
-  # Removendo um usuário de um grupo
+# Removendo um usuário de um grupo
  
  ```
  sudo gpasswd -d <USER_NAME> <GROUP_NAME>
  ```
  
- # Logs de boot
+# Logs de boot
  
  Os logs de boot podem ser encontrados no seguinte arquivo
  
@@ -480,7 +480,7 @@ sudo userdel <USER_NAME>
  
  São úteis para troubleshooting de problemas ao bootar o PC
  
-  # Logs para SSH
+# Logs para SSH
  
  Os logs para SSH podem ser encontrados no seguinte arquivo
  
@@ -490,7 +490,7 @@ sudo userdel <USER_NAME>
  
  Nele, podemos verificar todos os erros que ocorreram em tentativas de SSH ao servidor em questão, juntamente ao comando **tail -f** (-f significando follow)
  
- # Logs do sistema
+# Logs do sistema
  
  Os logs do sistema estão localizados no arquivo 
  
@@ -500,7 +500,7 @@ sudo userdel <USER_NAME>
  
  Nele, podemos realizar o troubleshooting de tudo que acontece (ou deveria acontecer) no sistema
  
- # Logs de serviços com o journalctl
+# Logs de serviços com o journalctl
  
  Os logs de algum **serviço** específico podem ser verificados pelo seguinte comando 
  
@@ -510,7 +510,7 @@ sudo userdel <USER_NAME>
  
  Os **serviços** que podem ser passados no parâmetro **\<NOME_SERVIÇO>** são todos aqueles que podem ser iniciados com o comando **service** ou **systemctl**, como docker, apache2, httpd, ssh, etc...
  
- # Listando dispositivos plugados
+# Listando dispositivos plugados
  
  List block devices
  
@@ -530,7 +530,7 @@ sudo userdel <USER_NAME>
  df -h
  ```
  
- # Removendo um mountpoint
+# Removendo um mountpoint
  
  ```
  sudo umount <MOUNT_PATH>
@@ -538,7 +538,7 @@ sudo userdel <USER_NAME>
 
  O \<MOUNT_PATH> pode ser encontrado pelo comando **lsblk**, na columa **MOUNTPOINT**, ou pelo comando **fdisk -l**
  
- # Criando uma nova partição em um dispositivo
+# Criando uma nova partição em um dispositivo
  
  Em um dispositivo **sem mountpoint**, podemos executar 
  
@@ -560,7 +560,7 @@ sudo userdel <USER_NAME>
  sudo mkfs.<FILESYSTEM_TYPE> -n "<LABEL_DA_PARTICAO>" <DEVICE_PATH>
  ```
  
- Opções válidas para o \<FILESYSTEM_TYPE> são ext4 (para Linux), dentre outras. <br>
+ Opções válidas para o \<FILESYSTEM_TYPE> são ext4 (para Linux), fat, dentre outras. (testei ext4 e não obtive sucesso ao plugar o pendrive!) <br>
  \<LABEL_DA_PARTICAO> se refere ao nome da partição no mountpoint. Se a flag -n não for informada, um label aleatório será gerado. <br>
  \<DEVICE_PATH> se refere a **PARTIÇÃO**, e não ao dispositivo!
  
@@ -570,7 +570,7 @@ sudo userdel <USER_NAME>
  mount <DEVICE> <PATH>
  ```
  
- # Baixando arquivos da internet com o wget
+# Baixando arquivos da internet com o wget
  
  Podemos copiar o link de download de algum site, da seguinte forma
  
@@ -585,7 +585,7 @@ sudo userdel <USER_NAME>
  **-P \<PATH>** - especificando o caminho do download, já que por padrão, o wget baixará o arquivo na pasta onde foi executado. <br>
  **-i \<FILE>** - especificando um arquivo com links para o wget baixar sequencialmente
  
- # Comprimindo e extraindo arquivos com o tar
+# Comprimindo e extraindo arquivos com o tar
  
  **tar -f <destiny> <origin>** - Usado para comprimir arquivos (similar ao .zip)
 - Option ``-c`` Compacta um diretório
@@ -599,7 +599,7 @@ Exemplo de utilização:
 tar -cf pasta-a-ser-gerada pasta <br>
 tar -xf pasta-comprimida
  
- # Gerenciando serviços como apache2, sshd, httpd pelo systemctl
+# Gerenciando serviços como apache2, sshd, httpd pelo systemctl
  
  Verificar o status de um serviço,
  
@@ -634,8 +634,3 @@ Para setar o status de um serviço como **ENABLED**, executamos:
  ```
  sudo systemctl disable <SERVICE_NAME>
  ```
-
-
-
- 
- 
