@@ -1,3 +1,44 @@
+[Diretórios](#diretórios) <br>
+[Comandos Linux](#comandos-linux) <br>
+[Redirection](#redirection) <br>
+[Piping](#piping) <br>
+[Expansion](#expansion) <br>
+[Permissions](#permissions) <br>
+[Bash Scripting básico](#bash-scripting-básico) <br>
+[Cron jobs sem root necessário](#cron-jobs-sem-root-necessário) <br>
+[Cron jobs com root](#cron-jobs-com-root) <br>
+[SSH](#ssh) <br>
+[SSH na AWS](#ssh-na-aws) <br>
+[SSH manual](#ssh-manual) <br>
+[Servidor Ubuntu contêinerizado com o openssh-server up](#servidor-ubuntu-contêinerizado-com-o-openssh-server-up) <br>
+[Criando pasta necessária (ainda não sei o porquê)](#criando-pasta-necessária-(ainda-não-sei-o-porquê)) <br>
+[Instalando o libs básicas e o ssh server](#instalando-o-libs-básicas-e-o-ssh-server) <br>
+[Criando usuário usuarioUbuntuServer com a senha 123](#criando-usuário-usuarioubuntuserver-com-a-senha-123) <br>
+[Criando diretórios necessários do usuário usuarioUbuntuServer](#criando-diretórios-necessários-do-usuário-usuarioubuntuserver) <br>
+[Informando que o usuário usuarioUbuntuServer é o dono das pastas /home/usuarioUbuntuServer/**](#informando-que-o-usuário-usuarioubuntuserver-é-o-dono-das-pastas-/home/usuarioubuntuserver/**) <br>
+[Copiando a chave pública para o contêiner](#copiando-a-chave-pública-para-o-contêiner) <br>
+[Iniciando o ssh-server](#iniciando-o-ssh-server) <br>
+[Arquivo para verificar todos os usuários do sistema](#arquivo-para-verificar-todos-os-usuários-do-sistema) <br>
+[Adicionando um novo usuário ao sistema](#adicionando-um-novo-usuário-ao-sistema) <br>
+[Deletando um usuário ao sistema](#deletando-um-usuário-ao-sistema) <br>
+[Mostrando de quais grupos o usuário faz parte](#mostrando-de-quais-grupos-o-usuário-faz-parte) <br>
+[Arquivo para verificar todos os grupos do sistema](#arquivo-para-verificar-todos-os-grupos-do-sistema) <br>
+[Criando um grupo](#criando-um-grupo) <br>
+[Deletando um grupo](#deletando-um-grupo) <br>
+[Adicionando um usuário a um grupo](#adicionando-um-usuário-a-um-grupo) <br>
+[Removendo um usuário de um grupo](#removendo-um-usuário-de-um-grupo) <br>
+[Logs de boot](#logs-de-boot) <br>
+[Logs para SSH](#logs-para-ssh) <br>
+[Logs do sistema](#logs-do-sistema) <br>
+[Logs de serviços com o journalctl](#logs-de-serviços-com-o-journalctl) <br>
+[Listando dispositivos plugados](#listando-dispositivos-plugados) <br>
+[Removendo um mountpoint](#removendo-um-mountpoint) <br>
+[Criando uma nova partição em um dispositivo](#criando-uma-nova-partição-em-um-dispositivo) <br>
+[Baixando arquivos da internet com o wget](#baixando-arquivos-da-internet-com-o-wget) <br>
+[Comprimindo e extraindo arquivos com o tar](#comprimindo-e-extraindo-arquivos-com-o-tar) <br>
+[Gerenciando serviços como apache2, sshd, httpd pelo systemctl](#gerenciando-serviços-como-apache2,-sshd,-httpd-pelo-systemctl) <br>
+
+
 # Diretórios
 
 ![image](https://user-images.githubusercontent.com/80921933/202584611-2286eea2-09d3-4755-9422-a1994e3dbfa7.png)
@@ -286,7 +327,7 @@ sudo service cron restart
 ```
 
  
-# SSH (Secure Shell)
+# SSH
 
 Para criar um server onde podemos "entrar" com o SSH, executamos a seguinte linha:
 
