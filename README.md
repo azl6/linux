@@ -550,9 +550,9 @@ sudo userdel <USER_NAME>
  
  Com o prompt do fdisk funcionando, podemos, nesta ordem:
  
- **g** - cria uma nova partition-table GPT
- **n** - cria uma nova partição. basta dar enter nos passos do prompt, ou personalizar os tamanhos, se desejar.
- **w** - commita as alterações
+ **g** - cria uma nova partition-table GPT <br>
+ **n** - cria uma nova partição. basta dar enter nos passos do prompt, ou personalizar os tamanhos, se desejar. <br>
+ **w** - commita as alterações <br>
  
  Após commitar as alterações do **fdisk** com a option **w**, devemos usar o comando **mkfs** para criar um file-system
  
@@ -560,8 +560,8 @@ sudo userdel <USER_NAME>
  sudo mkfs.<FILESYSTEM_TYPE> -n "<LABEL_DA_PARTICAO>" <DEVICE_PATH>
  ```
  
- Opções válidas para o \<FILESYSTEM_TYPE> são ext4 (para Linux), dentre outras.
- \<LABEL_DA_PARTICAO> se refere ao nome da partição no mountpoint. Se a flag -n não for informada, um label aleatório será gerado.
+ Opções válidas para o \<FILESYSTEM_TYPE> são ext4 (para Linux), dentre outras. <br>
+ \<LABEL_DA_PARTICAO> se refere ao nome da partição no mountpoint. Se a flag -n não for informada, um label aleatório será gerado. <br>
  
  Depois, basta montar o dispositivo em alguma pasta, geralmente em **/media** para dispositivos temporários ou **/mnt** para dispositivos mais "permanentes", como um segundo HD, etc.
  
