@@ -546,7 +546,7 @@ sudo userdel <USER_NAME>
  sudo fdisk <DEVICE_PATH>
  ```
  
- **Obs:** O \<DEVICE_PATH> está geralmente localizado em /dev/..
+ **Obs:** O \<DEVICE_PATH> é o disco, **E NÃO A PARTIÇÃO**, como **sdb**, **sdc**, mas não **sdb1** ou semelhantes!!
  
  Com o prompt do fdisk funcionando, podemos, nesta ordem:
  
