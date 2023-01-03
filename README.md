@@ -142,14 +142,6 @@ sed 's/<STRING_PARA_REMOVER>/<STRING_SUBSTITUTA>/g' <INPUT_FILE>
 
 ![Screenshot from 2022-12-05 18-38-26](https://user-images.githubusercontent.com/80921933/205748249-c9946ad2-0c7e-44ec-b6b4-2c071161f38e.png)
 
-**tar -f <destiny> <origin>** - Usado para comprimir arquivos (similar ao .zip)
-- Option ``-c`` Compacta um diretório
-- Option ``-x`` Extrai um arquivo .tar
-- Option ``-z`` Usa o algorítmo gzip para compactar/extrair
-- Option ``-v`` Forma verbosa, arquivos extraidos/compactados serão listados
-- Option ``-f`` Especifica o arquivo (já está incluido no comando pq é sempre utilizado)
-
-
 Comandos pendentes de inserção:
 
 **xargs** <br>
@@ -592,5 +584,19 @@ sudo userdel <USER_NAME>
  **-P \<PATH>** - especificando o caminho do download, já que por padrão, o wget baixará o arquivo na pasta onde foi executado. <br>
  **-i \<FILE>** - especificando um arquivo com links para o wget baixar sequencialmente
  
+ Comprimindo e extraindo arquivos com o tar
+ 
+ **tar -f <destiny> <origin>** - Usado para comprimir arquivos (similar ao .zip)
+- Option ``-c`` Compacta um diretório
+- Option ``-x`` Extrai um arquivo .tar
+- Option ``-z`` Usa o algorítmo gzip para compactar/extrair
+- Option ``-v`` Forma verbosa, arquivos extraidos/compactados serão listados
+- Option ``-f`` Especifica o nome do arquivo gerado (já está incluido no comando pq é sempre utilizado)
+
+Exemplo de utilização:
+
+tar -cf pasta-a-ser-gerada pasta <br>
+tar -xf pasta-comprimida
+
  
  
