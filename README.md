@@ -1,5 +1,4 @@
-**Informações gerais sobre o Linux**
-
+**Informações gerais sobre o Linux** <br>
 [Diretórios](#diretórios) <br>
 [Comandos Linux](#comandos-linux) <br>
 [Redirection](#redirection) <br>
@@ -10,15 +9,13 @@
 [Cron jobs sem root necessário](#cron-jobs-sem-root-necessário) <br>
 [Cron jobs com root](#cron-jobs-com-root) <br>
 
-**SSH**
-
+**SSH** <br>
 [SSH](#ssh) <br>
 [SSH na AWS](#ssh-na-aws) <br>
 [SSH manual](#ssh-manual) <br>
 [Servidor Ubuntu contêinerizado com o openssh-server up](#servidor-ubuntu-contêinerizado-com-o-openssh-server-up) <br>
 
-**Gerenciando usuários e grupos**
-
+**Gerenciando usuários e grupos** <br>
 [Arquivo para verificar todos os usuários do sistema](#arquivo-para-verificar-todos-os-usuários-do-sistema) <br>
 [Adicionando um novo usuário ao sistema](#adicionando-um-novo-usuário-ao-sistema) <br>
 [Deletando um usuário ao sistema](#deletando-um-usuário-ao-sistema) <br>
@@ -29,26 +26,23 @@
 [Adicionando um usuário a um grupo](#adicionando-um-usuário-a-um-grupo) <br>
 [Removendo um usuário de um grupo](#removendo-um-usuário-de-um-grupo) <br>
 
-**Logs**
-
+**Logs** <br>
 [Logs de boot](#logs-de-boot) <br>
 [Logs para SSH](#logs-para-ssh) <br>
 [Logs do sistema](#logs-do-sistema) <br>
 [Logs de serviços com o journalctl](#logs-de-serviços-com-o-journalctl) <br>
 
-**Mountpoints e dispositivos**
-
+**Mountpoints e dispositivos** <br>
 [Listando dispositivos plugados](#listando-dispositivos-plugados) <br>
 [Removendo um mountpoint](#removendo-um-mountpoint) <br>
 [Criando uma nova partição em um dispositivo](#criando-uma-nova-partição-em-um-dispositivo) <br>
 
-**Utilitários**
-
+**Utilitários** <br>
 [Baixando arquivos da internet com o wget](#baixando-arquivos-da-internet-com-o-wget) <br>
 [Comprimindo e extraindo arquivos com o tar](#comprimindo-e-extraindo-arquivos-com-o-tar) <br>
 [Gerenciando serviços como apache2 sshd httpd pelo systemctl](#gerenciando-serviços-como-apache2-sshd-httpd-pelo-systemctl) <br>
 
-# Diretórios
+# Diretórios 
 
 ![image](https://user-images.githubusercontent.com/80921933/202584611-2286eea2-09d3-4755-9422-a1994e3dbfa7.png)
 
