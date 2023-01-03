@@ -562,6 +562,7 @@ sudo userdel <USER_NAME>
  
  Opções válidas para o \<FILESYSTEM_TYPE> são ext4 (para Linux), dentre outras. <br>
  \<LABEL_DA_PARTICAO> se refere ao nome da partição no mountpoint. Se a flag -n não for informada, um label aleatório será gerado. <br>
+ \<DEVICE_PATH> se refere a **PARTIÇÃO**, e não ao dispositivo!
  
  Depois, basta montar o dispositivo em alguma pasta, geralmente em **/media** para dispositivos temporários ou **/mnt** para dispositivos mais "permanentes", como um segundo HD, etc.
  
