@@ -584,7 +584,7 @@ sudo userdel <USER_NAME>
  **-P \<PATH>** - especificando o caminho do download, já que por padrão, o wget baixará o arquivo na pasta onde foi executado. <br>
  **-i \<FILE>** - especificando um arquivo com links para o wget baixar sequencialmente
  
- Comprimindo e extraindo arquivos com o tar
+ # Comprimindo e extraindo arquivos com o tar
  
  **tar -f <destiny> <origin>** - Usado para comprimir arquivos (similar ao .zip)
 - Option ``-c`` Compacta um diretório
