@@ -36,7 +36,7 @@
 [Listando dispositivos plugados](#listando-dispositivos-plugados) <br>
 [Removendo um mountpoint](#removendo-um-mountpoint) <br>
 [Criando uma nova partição em um dispositivo](#criando-uma-nova-partição-em-um-dispositivo) <br>
-[Criando um servidor NFS](#criando-um-servidor-nfs) <br>
+[Criando um servidor NFS em distros Debian](#criando-um-servidor-nfs-em-distros-debian) <br>
 
 **Utilitários** <br>
 [Baixando arquivos da internet com o wget](#baixando-arquivos-da-internet-com-o-wget) <br>
@@ -672,7 +672,7 @@ Para setar o status de um serviço como **ENABLED**, executamos:
  sudo systemctl disable <SERVICE_NAME>
  ```
  
- # Criando um servidor NFS
+ # Criando um servidor NFS em distros Debian
  
  Primeiramente, no **server**, instalamos os seguintes pacotes
  
@@ -758,4 +758,9 @@ Buscando e removendo arquivos a partir do current dir que terminem com ".txt"
 find . -name "*.txt" -exec rm {} +
 ```
   
+# Criando um servidor NFS em distros RedHat
+
+**Seguir tutorial do link:** https://www.thegeekdiary.com/centos-rhel-7-configuring-an-nfs-server-and-nfs-client/
+
+Segui o tutorial para 2 instâncias EC2 (que são baseadas em RedHat) e deu tudo certo!
   
