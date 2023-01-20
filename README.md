@@ -606,12 +606,12 @@ sudo userdel <USER_NAME>
  ```
  
  Opções válidas para o **\<FILESYSTEM_TYPE>** são **ext4** (para Linux), **fat**, dentre outras. (testei ext4 e não obtive sucesso ao plugar o pendrive!) <br>
- **\<PARTITION_PATH>** se refere a **PARTIÇÃO**, e não ao dispositivo!
+ **\<PARTITION_PATH>** se refere a **PARTIÇÃO** (geralmente em /dev juntamente aos dispositivos), e **NÃO** ao dispositivo!
  
  Depois, basta montar o dispositivo em alguma pasta, geralmente em **/media** para dispositivos temporários ou **/mnt** para dispositivos mais "permanentes", como um segundo HD, etc.
  
  ```
- mount <PARTITION> <PATH_TO_MOUNT>
+ mount <PARTITION_PATH> <PATH_TO_MOUNT>
  ```
  
 # Baixando arquivos da internet com o wget
