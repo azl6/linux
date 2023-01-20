@@ -37,6 +37,7 @@
 [Removendo um mountpoint](#removendo-um-mountpoint) <br>
 [Criando uma nova partição em um dispositivo](#criando-uma-nova-partição-em-um-dispositivo) <br>
 [Criando um servidor NFS em distros Debian](#criando-um-servidor-nfs-em-distros-debian) <br>
+[Criando um servidor NFS em distros RedHat](#criando-um-servidor-nfs-em-distros-redhat)
 
 **Utilitários** <br>
 [Baixando arquivos da internet com o wget](#baixando-arquivos-da-internet-com-o-wget) <br>
