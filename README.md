@@ -602,17 +602,16 @@ sudo userdel <USER_NAME>
  Após commitar as alterações do **fdisk** com a option **w**, devemos usar o comando **mkfs** para criar um file-system
  
  ```
- sudo mkfs.<FILESYSTEM_TYPE> -n "<LABEL_DA_PARTICAO>" <DEVICE_PATH>
+ sudo mkfs.<FILESYSTEM_TYPE> <PARTITION_PATH>
  ```
  
- Opções válidas para o \<FILESYSTEM_TYPE> são ext4 (para Linux), fat, dentre outras. (testei ext4 e não obtive sucesso ao plugar o pendrive!) <br>
- \<LABEL_DA_PARTICAO> se refere ao nome da partição no mountpoint. Se a flag -n não for informada, um label aleatório será gerado. <br>
- \<DEVICE_PATH> se refere a **PARTIÇÃO**, e não ao dispositivo!
+ Opções válidas para o **\<FILESYSTEM_TYPE>** são **ext4** (para Linux), **fat**, dentre outras. (testei ext4 e não obtive sucesso ao plugar o pendrive!) <br>
+ **\<PARTITION_PATH>** se refere a **PARTIÇÃO**, e não ao dispositivo!
  
  Depois, basta montar o dispositivo em alguma pasta, geralmente em **/media** para dispositivos temporários ou **/mnt** para dispositivos mais "permanentes", como um segundo HD, etc.
  
  ```
- mount <DEVICE> <PATH>
+ mount <PARTITION> <PATH_TO_MOUNT>
  ```
  
 # Baixando arquivos da internet com o wget
