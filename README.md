@@ -36,6 +36,7 @@
 [Listando dispositivos plugados](#listando-dispositivos-plugados) <br>
 [Removendo um mountpoint](#removendo-um-mountpoint) <br>
 [Criando uma nova partição em um dispositivo](#criando-uma-nova-partição-em-um-dispositivo) <br>
+[Criando um servidor NFS](#criando-um-servidor-nfs) <br>
 
 **Utilitários** <br>
 [Baixando arquivos da internet com o wget](#baixando-arquivos-da-internet-com-o-wget) <br>
@@ -678,3 +679,64 @@ Para setar o status de um serviço como **ENABLED**, executamos:
  ```
  sudo systemctl disable <SERVICE_NAME>
  ```
+ 
+ # Criando um servidor NFS
+ 
+ Primeiramente, no **server**, instalamos os seguintes pacotes
+ 
+ ```bash
+ sudo apt install nfs-kernel-server nfs-common rpcbind
+ ```
+ 
+ No **server**, criamos a pasta que será compartilhada via NFS, e fornecemos as permissões desejadas via chmod
+ 
+ ```bash
+ sudo mkdir /tmp/nfs-share && sudo chmod 777 /tmp/nfs-share -R
+ ```
+ 
+ Agora, alteramos o arquivo **/etc/exports**, que é uma lista de controle de acessos ao NFS, inserindo uma linha no seguinte formato:
+ 
+ ```bash
+ <DIR_NFS> <IPS_LIBERADOS> (rw,sync,no_subtree_check)
+ ```
+ 
+ Em nosso exemplo, essa linha ficaria assim (usei * porque quero permitir que todas as máquinas possam montar essa diretório):
+ 
+ ```bash
+ /tmp/nfs-share *(rw,sync,no_subtree_check)
+ ```
+ Agora, liberamos NFS em nosso firewall
+ 
+ ```bash
+ sudo ufw allow nfs
+ ```
+ 
+ Podemos confirmar que o mountpoint foi criado com o comando:
+ 
+ ```bash
+ showmount -e
+ ```
+ 
+ No **client**, criamos um diretório para servir de mountpoint, e aplicamos as permissões desejadas
+ 
+ ```bash
+ sudo mkdir /mnt/my-mountpoint && sudo chmod 777 /mnt/my-mountpoint -R
+ ```
+ 
+ Ainda no client, instalamos os pacotes:
+ 
+ ```
+ sudo apt install rpcbind nfs-common
+ ```
+ 
+ Agora, basta montarmos o diretório com o comando **mount**
+ 
+ ```
+ sudo mount 222.222.222.222:/tmp/nfs-share /mnt/my-mountpoint
+ ```
+ 
+ Agora, no arquivo **/etc/fstab**, inserimos a seguinte linha (adaptando para a sua realidade)
+ 
+ ![image](https://user-images.githubusercontent.com/80921933/213751778-bc31e1ea-644a-49a2-883f-caeaf9200484.png)
+
+ Pronto! O mountpoint já deve estar funcionando. Tente criar algum arquivo lá!
