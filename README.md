@@ -42,6 +42,7 @@
 [Baixando arquivos da internet com o wget](#baixando-arquivos-da-internet-com-o-wget) <br>
 [Comprimindo e extraindo arquivos com o tar](#comprimindo-e-extraindo-arquivos-com-o-tar) <br>
 [Gerenciando serviços como apache2 sshd httpd pelo systemctl](#gerenciando-serviços-como-apache2-sshd-httpd-pelo-systemctl) <br>
+[Utilizando o find para encontrar e manipular arquivos](#utilizando-o-find-para-encontrar-e-manipular-arquivos) <br>
 
 # Diretórios 
 
@@ -98,14 +99,6 @@
 ![Screenshot from 2022-11-19 21-10-28](https://user-images.githubusercontent.com/80921933/202876631-7ea008e1-bab6-421f-808c-a01121d13df6.png)
 
 <br>
-
-**find** - Busca arquivos com base no padrão informado.
-
-- Option ``-type <type>`` busca por arquivos (type=f) ou diretórios (type=d)
-- Option ``-name "<padrão>"`` busca por arquivos que atendam ao padrão especificado. Ex: find -name "*.txt" busca por todos os arquivos finalizados em ".txt".
-- Option ``-mmin {+,-}<time>`` busca por arquivos com o modification time maior/menor que <time>.
-- Option ``-amin {+,-}<time>`` busca por arquivos com o access time maior/menor que <time>.
-- Option ``-mtime {+,-}<time>`` busca por arquivos com o modification time maior/menor que <time>. Diferentemente do mmin, o mtime busca por <time>*24, ou seja, o <time> informado no parâmetro representa o período de um dia inteiro.
 
 **grep <PATTERN> <FILE>** - Busca por ocorrências de um padrão dentro de um arquivo/texto.
 
@@ -739,3 +732,30 @@ Para setar o status de um serviço como **ENABLED**, executamos:
  ![image](https://user-images.githubusercontent.com/80921933/213751778-bc31e1ea-644a-49a2-883f-caeaf9200484.png)
 
  Pronto! O mountpoint já deve estar funcionando. Tente criar algum arquivo lá!
+  
+ # Utilizando o find para encontrar e manipular arquivos
+  
+**find** - Busca arquivos com base no padrão informado.
+
+- Option ``-name "<padrão>"`` busca por arquivos e diretórios cujo nome bata com o padrão fornecido.
+- Option ``-type <type>`` busca por arquivos (type=f) ou diretórios (type=d)
+- Option ``-exec <COMANDO> {} +`` executa um comando nos itens encontrados pelo **find**
+
+**Exemplos do comando find:**
+
+Buscando todos os **arquivos e diretórios** a partir do homedir que terminam com ".txt"
+```
+find /home/azl6 -name "*.txt"
+```
+
+Buscando todos os **arquivos** (e não diretórios!) a partir do homedir cujo nome é exatamente "Documents" 
+```
+find /home/azl6 -name "Documents" -type f
+```
+
+Buscando e removendo arquivos a partir do current dir que terminem com ".txt"
+```
+find . -name "*.txt" -exec rm {} +
+```
+  
+  
