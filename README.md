@@ -704,6 +704,12 @@ Para setar o status de um serviço como **ENABLED**, executamos:
  sudo ufw allow nfs
  ```
  
+ Agora, rodamos o seguinte comando para exportar o share NFS
+ 
+ ```bash
+ sudo exportfs -r
+ ```
+ 
  Podemos confirmar que o mountpoint foi criado com o comando:
  
  ```bash
