@@ -366,7 +366,7 @@ Depois, basta executar, a partir do client, o comando `ssh <\SERVER_USER>@\<IP_E
 
 Caso queiramos criar uma chave ssh e acessar o servidor remoto a partir dela:
 
-1. Primeiro, criamos uma chave na máquina do client com o comando `ssh-keygen -f \<KEY_NAME>`
+1. Primeiro, criamos uma chave na máquina do client com o comando `ssh-keygen -f \<KEY_NAME>`. Podemos também especificar o tipo da chave com a flag -t \<TIPO_CHAVE>. Tipos disponíveis são rsa, ed25519, etc...
 2. Depois, enviamos a chave ao server com o comando `ssh-copy-id \<SERVER_USER>@\<SERVER_IP>`
 
 Os 2 passos acima são representados pela seguinte imagem:
