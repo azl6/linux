@@ -774,7 +774,7 @@ Segui o tutorial para 2 instâncias EC2 (que são baseadas em RedHat) e deu tudo
   
 # Informações importantes sobre o SSH
 
-Quando geramos uma chave sem especificar um caminho, ela será gerada em **$HOME/.ssh/**
+Quando geramos uma chave sem especificar um caminho, as chaves públicas e privadas são geradas em **$HOME/.ssh/**
 
 Quando executamos o ssh `\<user>@\<host>`, o comando **ssh** buscará pela chave privada no diretório **$HOME/.ssh**. Se a chave não estiver lá, receberemos o erro **Permission denied**, a não ser que explicitamente especifiquemos o caminho da chave com a flag **-i**
 
