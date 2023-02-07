@@ -10,6 +10,7 @@
 [Cron jobs com root](#cron-jobs-com-root) <br>
 
 **SSH** <br>
+[Informações importantes sobre o SSH](#informações-importantes-sobre-o-ssh) <br>
 [SSH](#ssh) <br>
 [SSH na AWS](#ssh-na-aws) <br>
 [SSH manual](#ssh-manual) <br>
@@ -771,3 +772,15 @@ find . -name "*.txt" -exec rm {} +
 
 Segui o tutorial para 2 instâncias EC2 (que são baseadas em RedHat) e deu tudo certo!
   
+# Informações importantes sobre o SSH
+
+Quando geramos uma chave sem especificar um caminho, ela será gerada em **$HOME/.ssh/**
+
+Quando executamos o ssh `\<user>@\<host>`, o comando **ssh** buscará pela chave privada no diretório **$HOME/.ssh**. Se a chave não estiver lá, receberemos o erro **Permission denied**, a não ser que explicitamente especifiquemos o caminho da chave com a flag **-i**
+
+O arquivo **authorized_keys** armazena a **chave pública**! Isso significa que, quando executamos o comando ssh-copy-id, estamos escrevendo uma chave pública (existente em **$HOME/.ssh** do ssh-client) para o arquivo **$HOME/.ssh/authorized_keys** no ssh-server. Copiar manualmente a chave-pública para esse arquivo também é possível.
+
+No arquivo **authorized_keys**, podemos colar uma chave embaixo da outra, da seguinte forma, sem problemas:
+
+![image](https://user-images.githubusercontent.com/80921933/217308303-5e395a14-6d5f-4642-96f5-faf6d6539354.png)
+
